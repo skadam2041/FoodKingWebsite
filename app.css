@@ -1,0 +1,403 @@
+/* css reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Karla', sans-serif;
+}
+
+/* navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+}
+
+/* logo and image  */
+#logo {
+    margin: 15px 30px;
+
+}
+
+#logo img {
+    height: 60px;
+    margin: 17px;
+    border-radius: 20px;
+}
+
+/* navigation list styling */
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    border: 2px solid black;
+    border-radius: 8px;
+
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+#navbar ul li a {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    margin: 0px 15px;
+
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/*  **************************************** */
+@media (max-width:1100px) {
+    #navbar {
+        flex-direction: column;
+        width: 1000px;
+    }
+
+    #navbar::before {
+
+        height: 200px;
+        flex-direction: column;
+    }
+
+}
+
+/**************************************************  */
+
+
+/* section Welcome */
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 200px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome::before {
+    content: "";
+    background: url('BackGroundImage/pexels-roman-odintsov-5903272.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 560px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+#welcome h1 {
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    padding: 12px;
+}
+
+#welcome h1:hover {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+
+#welcome p {
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+#welcome #btn {
+    margin-top: 20px;
+    ;
+    padding: 5px 15px;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+#welcome #btn:hover {
+    color: white;
+    background-color: rgb(209, 180, 180);
+}
+
+/* ******************************************** */
+
+@media (max-width:1100px) {
+    #welcome {
+        padding: 200px 0 0 0;
+        width: 800px;
+        margin-left: 97px;
+
+    }
+
+    #welcome::before {
+
+        width: 1000px;
+        margin: 50px;
+    }
+}
+
+/* ***************************************** */
+
+/* section our services */
+#services {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#services .cards {
+    border: 3px solid black;
+    padding: 5px;
+    height: 70%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#ServicesHeading {
+    font-size: 1.5rem;
+    display: flex;
+    text-align: center;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
+}
+
+#ServicesHeading h1 {
+    text-align: center;
+    margin: auto;
+}
+
+#services .cards img {
+    height: 450px;
+    width:100%;
+
+}
+#services div h2{
+    font-size: 2.3rem ;
+}
+
+#services .cards p {
+    text-align: center;
+
+    font-size: 2rem;
+}
+/* ****************************************  */
+
+@media (max-width:1100px) {
+    #services {
+        flex-wrap: wrap;
+        width: 950px;
+    }
+}
+
+/* ******************************************** */
+
+/* food items */
+#foodHeading {
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.foodimages {
+    padding: 20px;
+}
+
+#foodItems {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 100%;
+}
+
+#foodItems::before {
+    content: "";
+    position: absolute;
+    background: url("BackGroundImage/pexels-pixabay-256318.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 720px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.food-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.foodimages img {
+    height: 300px;
+    width: 400px;
+}
+
+
+/* ************************************  */
+@media (max-width:1100px) {
+    #foodItems {
+        flex-wrap: wrap;
+        height: 1000px;
+        width: 1000px;
+    }
+    
+    #foodItems::before {
+        width: 1000px;
+        height: 1050px;
+    }
+    .food-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* *******************************************  */
+
+
+/* contact us  */
+
+#contactHeadinhg {
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#contact-box {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 600px;
+    align-items: center;
+    width: 100%;
+
+}
+
+#contact-box::before {
+    content: "";
+    background: url("BackGroundImage/pexels-engin-akyurt-1435909.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 560px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    margin: auto;
+}
+
+
+#contact-box input {
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+
+}
+
+#contact-box form {
+    width: 70%;
+    font-weight: 900;
+
+
+}
+
+#contact-box label {
+    font-size: 1.7rem;
+}
+
+#contact-box textarea  {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+/*  *************************************  */
+
+@media (max-width:1100px) {
+    #contact-box {
+        height: 600px;
+        width: 960px;
+    }
+    
+    #contact-box::before {
+        height: 560px;
+        width: 960px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+}
+
+/*  ************************************* */
+
+
+/* footer */
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+/* **********************  */
+@media (max-width:1000px) {
+
+}
+/* ********************* */
